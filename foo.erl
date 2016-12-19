@@ -1,5 +1,5 @@
 -module(foo).
--export([square/1, add/2, fact1/1, fact/1, mynot/1, even/1]).
+-export([square/1, add/2, fact1/1, fact/1, mynot/1, even/1, evil/1]).
 
 square(X) ->
     X * X.
@@ -33,3 +33,6 @@ even(3) ->
 even(N) ->
     not(even(N-1)).
 
+
+evil(N) ->
+    abs(N) rem 2 == 0.
